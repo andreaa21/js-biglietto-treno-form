@@ -8,3 +8,11 @@
 h2{
     font-size: .1rem;
 }
+
+label{
+    display: block;
+}
+
+.hide{
+    display: none;
+}

@@ -14,27 +14,29 @@
  
 <div class="container mt-5">
     <div class="row">
-        <div class="col text-center">
-            <h4>
+        <div class="col text-center d-flex flex-column">
+            <label for="name">
                 Nome e Cognome
-            </h4>
-            <input type="text" id="name" value="">
+            </label>
+            <input type="text" id="name" value=""
+            placeholder="Inserisci il nome">
         </div>
-        <div class="col text-center">
-            <h4>
+        <div class="col text-center d-flex flex-column">
+            <label for="km">
                 Km
-            </h4>
-            <input type="text" id="km" value="">
+            </label>
+            <input type="number" id="km" value=""
+            placeholder="Km da fare">
         </div>
-        <div class="col text-center">
-            <h4>
+        <div class="col text-center d-flex flex-column">
+            <label for="fascia">
                 Fascia d'età
-            </h4>
+            </label>
             <select name="fascia d'età" id="age" class="w-100">
                 <option value="under18">
                     Junior
                 </option>
-                <option value="over18">
+                <option value="over18" selected>
                     Adulto
                 </option>
                 <option value="over65">
@@ -46,16 +48,39 @@
 
     <div class="row d-flex justify-content-center mt-3">
         <div class="col col-3 d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary" id="btn-input">Genera</button>
+            <button type="submit" class="btn btn-outline-success" id="genera">
+                Genera
+            </button>
          </div>
          <div class="col col-3 d-flex justify-content-start">
-            <button type="reset" class="btn btn-danger">Annulla</button>
+            <button type="reset" class="btn btn-outline-danger" id="annulla">
+                Annulla
+            </button>
          </div>
     </div>
 </div>
 
-<div class="container">
-    <span id="output">we</span>
+<div class="container ticket">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Passeggeri</th>
+            <th scope="col">Offerta</th>
+            <th scope="col">Carrozza</th>
+            <th scope="col">Codice CP</th>
+            <th scope="col">Costo biglietto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="outputName"></td>
+            <td id="outputOffer"></td>
+            <td id="outputCoach"></td>
+            <td id="outputCP"></td>
+            <td id="outputPrice"></td>
+          </tr>
+        </tbody>
+      </table>
 </div>
 
     <script src="js/script.js"></script>
